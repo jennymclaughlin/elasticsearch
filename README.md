@@ -5,7 +5,7 @@ Current Elasticsearch version is `5.6.2`.
 
 [A more robust example that follows Elasticsearch best-practices of separating nodes concern is also available](production_cluster/README.md).
 
-Current pod descriptors use an `emptyDir` for storing data in each data node container. This is meant to be for the sake of simplicity and [should be adapted according to your storage needs](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
+Current pod descriptors use an `emptyDir` for storing data in each data node container. Even though the cluster uses transient storage, it will still be able to recover in an event of scale-down. This is meant to be for the sake of simplicity and [should be adapted according to your storage needs](https://kubernetes.io/docs/concepts/storage/persistent-volumes/). A stateful deployment example can be found [here](https://github.com/jennymclaughlin/StatefulESK8s/).
 
 ## Docker image
 
